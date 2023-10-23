@@ -15,6 +15,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .btn-primary {
     background: var(--default-green);
     color: white;
