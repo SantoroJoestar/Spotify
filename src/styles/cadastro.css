@@ -178,6 +178,7 @@ a {
     align-items: center;
     gap: 10px;
     text-align: left;    
+    color: white;
 }
 
 .registerSection2 .loginInputPassword {
@@ -187,7 +188,12 @@ a {
     align-items: center;
     gap: 10px;
     text-align: start;
+    color: white;
     
+}
+
+input{
+    color: white;
 }
 
 .registerSection2 input {
@@ -370,3 +376,4 @@ a {
     display: inline-block;
     margin-left: 0.6rem;
 }
+
