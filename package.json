@@ -6,6 +6,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
@@ -13,11 +14,11 @@
   },
   "name": "spotify",
   "version": "1.0.0",
-  "main": "C:/Projects/Spotify/src/js/app.js",
+  "main": "C:/Projects/Spotify/src/app.js",
   "author": "arturSantoro <artur.santoro@sienacompany.com>",
   "license": "MIT",
   "devDependencies": {
-    "nodemon":"^3.0.1"
+    "nodemon": "^3.0.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
