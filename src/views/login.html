@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="/public/styles/login.css">
     <title>Faça seu Login</title>
 </head>
 
@@ -12,7 +12,7 @@
 
     <nav class="navbar">
         <div class="navbar-container">
-           <a href="index.html"> <img src="assets/logo.png" alt="Logo Spotify" class="logo"> </a>
+           <a href="index.html"> <img src="/public/assets/logo.png" alt="Logo Spotify" class="logo"> </a>
             <ul class="navbar-items">
                 <li class="navbar-item">
                     Premium
@@ -24,7 +24,7 @@
                     Baixar
                 </li>
                 <li class="navbar-item">
-                    <a href="cadastro.html">Inscrever-se</a>
+                    <a href="/app/register">Inscrever-se</a>
                 </li>
             
                 <li class="navbar-item">
@@ -85,7 +85,7 @@
                         <input type="text" class="password" placeholder="Senha">
                     </div>
 
-                    <a class="login" href="app.html">Entrar</a>
+                    <a class="login">Entrar</a>
                     <p class="forgetPassword">Esqueceu sua senha?</p>
                 </div>
 
@@ -107,7 +107,7 @@
 
     <footer id="footer">
         <div class="footer-content">
-            <img src="assets/logo.png" alt="Logo do Spotify" class="logo">
+            <img src="/public/assets/logo.png" alt="Logo do Spotify" class="logo">
             <ul class="footer-menu">
                 <p>Empresa</p>
                 <li class="footer-menu-item">
@@ -180,13 +180,15 @@
             <div class="rights">
                 <div class="country">
                     <p>Brasil</p>
-                    <img src="assets/brazil.png" alt="Bandeira do Brasil" class="brazil-flag">
+                    <img src="/public/assets/brazil.png" alt="Bandeira do Brasil" class="brazil-flag">
                 </div>
                 <p>&copy; 2020 Spotify</p>
             </div>
         </div>
     </footer>
 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/public/js/loginRequest.js"></script>
     <script src="https://kit.fontawesome.com/d35ec4e8ea.js" crossorigin="anonymous"></script>
 
 </body>

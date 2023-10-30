@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/cadastro.css">
+    <link rel="stylesheet" href="/public/styles/cadastro.css">
     <title>Cadastre-se no Spotify</title>
 </head>
 
@@ -12,7 +12,7 @@
 
     <nav class="navbar">
         <div class="navbar-container">
-           <a href="index.html"> <img src= "assets/logo.png" alt="Logo Spotify" class="logo"> </a>
+            <a href="index.html"> <img src="/public/assets/logo.png" alt="Logo Spotify" class="logo"> </a>
             <ul class="navbar-items">
                 <li class="navbar-item">
                     Premium
@@ -26,7 +26,7 @@
                 <li class="navbar-item">
                     <a href="cadastro.html">Inscrever-se</a>
                 </li>
-            
+
                 <li class="navbar-item">
                     <a href="login.html">Entrar</a>
                 </li>
@@ -43,54 +43,51 @@
     <main>
 
         <div class="backgroundSection">
-
-
             <div class="registerSection1">
-                <div class="title">Cadastre-se no Spotify</div>
-               
-                <div class="registerSection2">
-                    <div class="loginInputEmail">
-                        <p class="titleEmail">E-mail ou nome de usuário</p>
-                        <input type="text" class="emailOrUser" placeholder="E-mail ou nome de usuário">
+                    <div class="title">Cadastre-se no Spotify</div>
+
+                    
+                        <div class="registerSection2" >
+                        <div class="loginInputEmail">
+                            <p class="titleEmail">E-mail ou nome de usuário</p>
+                            <input type="text" class="emailOrUser" placeholder="E-mail ou nome de usuário" name="email">
+                        </div>
+
+                        <div class="loginInputPassword">
+                            <p class="titlePassword">Senha</p>
+                            <input type="text" class="password" placeholder="Senha" name="password">
+                        </div>
+
+                        <button class="login" id="cadastrar">Cadastrar</button>
                     </div>
-
-                    <div class="loginInputPassword">
-                        <p class="titlePassword">Senha</p>
-                        <input type="text" class="password" placeholder="Senha">
-                    </div>
-
-                    <button class="login">Cadastrar</button>
-                </div>
-                <hr class="line">
-                <ul class="logins">
-                    <li class="loginsOptions">
-                        <button class="loginGoogle buttons">
-                            <div class="buttonGoogle"><i class="fab fa-brands fa-google" style="color: #ffffff;"></i>
-                            </div>Continuar com o Google
-                        </button>
-                    </li>
-                    <li class="loginsOptions">
-                        <button class="loginFacebook buttons">
-                            <div class="buttonFacebook"><i class="fab fa-brands fa-facebook"
-                                    style="color: #ffffff;"></i></div>Continuar com o Facebook
-                        </button>
-                    </li>
-                    <li class="loginsOptions">
-                        <button class="loginApple buttons">
-                            <div class="buttonApple">
-                                <i class="fab fa-brands fa-apple" style="color: #ffffff;"></i>
-                            </div>Continuar com a Apple
-                        </button>
-                    </li>
-                    <li class="loginsOptions">
-                        <button class="loginPhone buttons">Continuar com um número de Telefone</button>
-                    </li>
-                </ul>
-
-                
-
-                
-
+                    
+                    
+                    <hr class="line">
+                    <ul class="logins">
+                        <li class="loginsOptions">
+                            <button class="loginGoogle buttons">
+                                <div class="buttonGoogle"><i class="fab fa-brands fa-google"
+                                        style="color: #ffffff;"></i>
+                                </div>Continuar com o Google
+                            </button>
+                        </li>
+                        <li class="loginsOptions">
+                            <button class="loginFacebook buttons">
+                                <div class="buttonFacebook"><i class="fab fa-brands fa-facebook"
+                                        style="color: #ffffff;"></i></div>Continuar com o Facebook
+                            </button>
+                        </li>
+                        <li class="loginsOptions">
+                            <button class="loginApple buttons">
+                                <div class="buttonApple">
+                                    <i class="fab fa-brands fa-apple" style="color: #ffffff;"></i>
+                                </div>Continuar com a Apple
+                            </button>
+                        </li>
+                        <li class="loginsOptions">
+                            <button class="loginPhone buttons">Continuar com um número de Telefone</button>
+                        </li>
+                    </ul>
             </div>
 
 
@@ -109,7 +106,7 @@
 
     <footer id="footer">
         <div class="footer-content">
-            <img src="assets/logo.png" alt="Logo do Spotify" class="logo">
+            <img src="/public/assets/logo.png" alt="Logo do Spotify" class="logo">
             <ul class="footer-menu">
                 <p>Empresa</p>
                 <li class="footer-menu-item">
@@ -182,13 +179,15 @@
             <div class="rights">
                 <div class="country">
                     <p>Brasil</p>
-                    <img src="assets/brazil.png" alt="Bandeira do Brasil" class="brazil-flag">
+                    <img src="/public/assets/brazil.png" alt="Bandeira do Brasil" class="brazil-flag">
                 </div>
                 <p>&copy; 2020 Spotify</p>
             </div>
         </div>
     </footer>
 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/public/js/registerRequest.js"></script>
     <script src="https://kit.fontawesome.com/d35ec4e8ea.js" crossorigin="anonymous"></script>
 
 </body>

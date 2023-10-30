@@ -1,40 +1,35 @@
 const jwt = require('jsonwebtoken');
 const authConfig = require('../config/auth.json');
+const path = require('path');
+
 
 module.exports = (req, res, next) => {
-    const authHeader = req.headers.authorization;
+    const redirectToLogin = () => {
+        const filePath = path.join(__dirname, '../views', 'login.html');
+        return res.sendFile(filePath);
+    }
 
+    const authHeader = req.cookies.authorization;
+    console.log(req.cookies)
     if(!authHeader){
-        return res.status(401).json({
-            error: true,
-            msg: "Token no provided"
-        })
+       return redirectToLogin();
     }
 
     const parts = authHeader.split(" ");
 
     if(parts.length !== 2) {
-        return res.status(401).json({
-            error: true,
-            messagem: "Invalid Token Type"
-        })
+        return redirectToLogin();
     }
 
     const [scheme, token] = parts;
 
     if(scheme.indexOf("Bearer") !== 0) {
-        return res.status(401).json({
-            error: true,
-            msg: "Token malformatted"
-        })
+        return redirectToLogin();
     }
 
     return jwt.verify(token, authConfig.secret, (err, decoded) => {
         if(err) {
-            return res.status(401).json({
-                error: true,
-                msg: "Token invalid/expired"
-            })
+            return redirectToLogin();
         }
 
         req.userLogged = decoded;

@@ -17,11 +17,11 @@ const generateToken = (user = {}) => {
 }
 
 router.post("/register", async (req, res) => {
-   
+   try {
     const { email } = req.body;
 
     if(await UserModel.findOne({email})){
-        return res.status(400).json({
+        return res.status(422).json({
             error: true,
             msg: "User already exists"
         });
@@ -31,10 +31,13 @@ router.post("/register", async (req, res) => {
 
     user.password = undefined;
 
-    return res.json({
-        user,
-        token: generateToken(user)
-    })
+    return res.status(201).json({
+        id: user._id
+    });
+   } catch (error) {
+        return res.status(500).send(error.message);
+   }
+    
 });
 
 router.post("/authenticate", async (req, res) => {

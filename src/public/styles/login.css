@@ -190,6 +190,10 @@ a {
     
 }
 
+input{
+    color: white;
+}
+
 .registerSection2 input {
     background: transparent;
     width: 120%;
